@@ -57,7 +57,7 @@ static char *parse_list[] = {
 
 extern struct g_data_t gd;
 extern char line_data[];
-struct input_field file_field;
+extern struct input_field file_field;
 
 #define NUM_PARSE_LIST (sizeof(parse_list) / sizeof(char *))
 
@@ -574,13 +574,13 @@ int create_pbi_ta2(int argc, char **argv)
 	}
 
 	printf("\nInput File is %s\n", gd.input_file);
-	
+
 	cfg_taal = get_ta_from_file(gd.input_file);
 	switch (cfg_taal)  {
 	case TA_2_0_PBL:
 		gd.stop_cmd = CRC_STOP_CMD_POWERPC;
 		break;
-	default :	
+	default :
 		gd.stop_cmd = CRC_STOP_CMD_ARM;
 		break;
 	}
