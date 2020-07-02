@@ -152,7 +152,7 @@ struct g_data_t {
 	uint32_t num_iek_revok;
 	uint8_t *pkey;
 	uint32_t key_len;
-	
+
 	uint32_t stop_cmd;
 	char rcw_fname[MAX_FNAME_LEN];
 	char rcw_op_fname[MAX_FNAME_LEN];
@@ -253,6 +253,7 @@ struct g_data_t {
 	uint8_t dbg_lvl;
 
 #define SCB_WP_SHIFT		0
+#define SCB_CSFF_SHIFT		1
 #define SCB_ITS_SHIFT		2
 #define SCB_NSEC_SHIFT		4
 #define SCB_ZD_SHIFT		5

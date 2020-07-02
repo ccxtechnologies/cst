@@ -78,6 +78,7 @@ static char *parse_list[] = {
 	"WP",
 	"ITS",
 	"NSEC",
+	"CSFF",
 	"ZD",
 	"K0",
 	"K1",

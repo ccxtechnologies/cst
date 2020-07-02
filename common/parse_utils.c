@@ -104,6 +104,7 @@ static parse_struct_t parse_table[] = {
 	{ "WP", FIELD_WP },
 	{ "ITS", FIELD_ITS },
 	{ "NSEC", FIELD_NSEC },
+	{ "CSFF", FIELD_CSFF },
 	{ "ZD", FIELD_ZD },
 	{ "K0", FIELD_K0 },
 	{ "K1", FIELD_K1 },
@@ -129,7 +130,7 @@ enum input_field_t index_from_field(char *field)
 	return FIELD_UNKNOWN_MAX;
 }
 
-char *tar[][2] = { 
+char *tar[][2] = {
 	{"NOR_8B", "b"},
 	{"NOR_16B", "f"},
 	{"NAND_8B_512", "8"},
@@ -1049,6 +1050,14 @@ int fill_gd_input_file(char *field_name, FILE *fp)
 		if (file_field.count == 1) {
 			i = STR_TO_UL(file_field.value[0], 16);
 			gd.scb = gd.scb | ((i & 0x1) << SCB_NSEC_SHIFT);
+			gd.flags |= (0x1 << FLAG_SYSCFG_SHIFT);
+		}
+		break;
+
+	case FIELD_CSFF:
+		if (file_field.count == 1) {
+			i = STR_TO_UL(file_field.value[0], 16);
+			gd.scb = gd.scb | ((i & 0x1) << SCB_CSFF_SHIFT);
 			gd.flags |= (0x1 << FLAG_SYSCFG_SHIFT);
 		}
 		break;

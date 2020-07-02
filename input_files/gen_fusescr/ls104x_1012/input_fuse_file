@@ -63,6 +63,7 @@ DBG_LVL=
 ---------------------------------------------------
 # System Configuration register bits in binary form [Optional]
 # WP (OEM write protect)
+# CSFF (Clear sensitive Flip-Flops)
 # ITS (Intent to Secure)
 # NSEC (Non secure)
 # ZD (ZUC Disable)
@@ -70,6 +71,7 @@ DBG_LVL=
 # FR0 (Field return 0)
 # FR1 (Field return 1)
 WP=
+CSFF=
 ITS=
 NSEC=
 ZD=

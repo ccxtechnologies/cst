@@ -131,6 +131,7 @@ enum input_field_t {
 	FIELD_WP,
 	FIELD_ITS,
 	FIELD_NSEC,
+	FIELD_CSFF,
 	FIELD_ZD,
 	FIELD_K0,
 	FIELD_K1,
