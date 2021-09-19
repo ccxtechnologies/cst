@@ -2,7 +2,7 @@
 
 #-----------------------------------------------------------------------------
 #
-# File: ls104x_1012_qspi.sh
+# File: ls1012_ardb_qspi.sh
 #
 # Copyright 2017-2018, 2020 NXP
 #
@@ -54,7 +54,7 @@ fi
 ./uni_sign input_files/uni_sign/ls104x_1012/input_kernel_secure
 
 # Sign uImage.bin
-./uni_sign input_files/uni_sign/ls104x_1012/input_uimage_secure
+./uni_sign input_files/uni_sign/ls104x_1012/ls1012ardb/input_uimage_secure
 
 # Sign uImage.dtb
 ./uni_sign input_files/uni_sign/ls104x_1012/input_dtb_secure
