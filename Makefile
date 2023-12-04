@@ -24,6 +24,8 @@ CC=gcc
 LD=gcc
 RM=rm -f
 
+CFLAGS += -Wno-deprecated-declarations
+
 ifneq ($(OPENSSL_LIB_PATH),)
 LDFLAGS += -L$(OPENSSL_LIB_PATH)
 endif
